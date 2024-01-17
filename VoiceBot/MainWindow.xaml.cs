@@ -17,7 +17,7 @@ namespace VoiceBot
 
         private Choices _grammarList = new Choices();
         private SpeechRecognitionEngine _speechRecognitionEngine = new SpeechRecognitionEngine();
-        
+
         public MainWindow()
         {
             _grammarList.Add(_grammarFile);
@@ -37,7 +37,7 @@ namespace VoiceBot
             }
 
             _speechSynthesizer.SelectVoiceByHints(VoiceGender.Female);
-            
+
             InitializeComponent();
         }
 
@@ -51,8 +51,22 @@ namespace VoiceBot
             String result = e.Result.Text;
 
             int resp = Array.IndexOf(_grammarFile, result);
-            
-            Say(_responseFile[resp]);
+
+            if (_responseFile[resp].IndexOf('*') == 0)
+            {
+                if (result.Contains("time"))
+                {
+                    Say(DateTime.Now.ToString(@"hh\:mm tt"));
+                }
+                else if(result.Contains("date"))
+                {
+                    Say(DateTime.Now.ToString(@"dd MMMM yyyy"));
+                }
+            }
+            else
+            {
+                Say(_responseFile[resp]);
+            }
         }
     }
 }
