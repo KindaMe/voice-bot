@@ -41,3 +41,5 @@ The construction of the pyramids, particularly the famous ones in Egypt like the
 USB (Universal Serial Bus) was invented by a group of seven companies: Compaq, DEC, IBM, Intel, Microsoft, NEC, and Nortel. The development of USB began in the mid-1990s, and the first USB specifications were released in 1996.
 *time
 *date
+*dark mode
+*light mode
