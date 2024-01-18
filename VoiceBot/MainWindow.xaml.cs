@@ -36,6 +36,8 @@ namespace VoiceBot
             _speechSynthesizer.SelectVoiceByHints(VoiceGender.Female);
 
             InitializeComponent();
+            
+            Say("Hello, I am your voice assistant.");
         }
 
         private void Say(string text)
@@ -66,6 +68,9 @@ namespace VoiceBot
                     case "*light mode":
                         Background = System.Windows.Media.Brushes.White;
                         centerLabel.Foreground = System.Windows.Media.Brushes.Black;
+                        break;
+                    case "*kill yourself":
+                        System.Windows.Application.Current.Shutdown();
                         break;
                 }
             }

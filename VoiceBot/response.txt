@@ -43,3 +43,4 @@ USB (Universal Serial Bus) was invented by a group of seven companies: Compaq, D
 *date
 *dark mode
 *light mode
+*kill yourself
